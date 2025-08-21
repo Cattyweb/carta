@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carta de cumpleaños</title>
+<style>
+    body {
+        margin: 0;
+        background: color: #ddfcfcff;
+        font-family: "Georgia", serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .card, .cat-card{
+        width: 360px;
+        background: white
+        border: 3px solid #fdb5c3;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 04px 12px rgba (255,192,203,0.4);
+        text-align: center;
+        position: absolute;
+        opacity: 0;
+        transform: scale(0.95)
+        transition: opacity o.4 ease, transform 0.4 ease;
+    }
+
+    .visible{
+        opacity: 1;
+        transform: scale(1);
+        z-index: 2;
+    }
+    .header-bar {
+        width: 100%;
+        height: 28px;
+        background: #ffd5e5;
+        border-radius: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    .header-bar span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+    }
+        h2 {
+            color: #e25587;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #333
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        
+        .higlight{
+            color: #e25587
+            font-weight: 600;
+        }
+        .ok-button, .buttons button{
+            margin-top: 15px;
+            padding: 6px 20px;
+            background-color: #fdf1f6;
+            border: 2px solid #d48ba5;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    img {
+      width: 100px;
+      margin: 15px 0;
+    }
+
+    .footer {
+      font-size: 12px;
+      margin-top: 15px;
+      color: #c68ea4;
+    }
+
+    .heart-line {
+      font-size: 12px;
+      color: #fdb5c3;
+      margin: 15px 0;
+    }
+
+    #reminderCard h2,
+    #reminderCard p {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cat-card visible" id="catCard">
+    <div class="header-bar">
+      <span></span><span></span><span></span>
+    </div>
+    <h2>FELIZ CUMPLEAÑOS MI VIDA!!!</h2>
+    <h2> 21 de agosto del 2025</h2>
+ <img src="WhatsApp Image 2025-08-20 at 11.40.54 PM.jpeg"/>
+    <p>Nunca <span class="highlight">olvidez</span> que te amo mucho, mi gordito precioso ¿ok?</p>
+    <button class="ok-button" onclick="showReminder()">OK</button>
+    <div class="footer">( Made by Lindsay )</div>
+  </div>
+
+  <div class="card" id="reminderCard">
+    <div class="header-bar">
+      <span></span><span></span><span></span>
+    </div>
+    <h2>Para mi Amorcito, Gamaliel Molina </h2>
+    <p>
+      Un 21 de agosto, naciste tu, un hombre que jamas creia que amaria tanto. Ya son casi cuatro años de conoceros!!!, yo debo de admitir que en algun momento llegue a pensar que lo nuestro seria algo pasajero 
+      porque ambos sabemos que en aquel momento teniamos muchas cosas encotra, pero ahora eh cambiado de opinion, 
+      ahora no puedo imaginar como seria mi vida sin ti. Sin poder ver mas tu hermosa sonrisa, o no poder escuchar las babosadas que muchas veces dices.
+      Gamaliel, aunque no lo creas tu eres alguien indispensable para mi, deseo con todo mi corazon permanecer contigo 
+      en las buenas y en las malas, cuidarte, apoyarte y poder formar una familia juntos.
+      Espero poder verte cumplir todos tus sueños, y si se que aveces discutimos hasta por cosas que son insignificantes y que 
+      yo muchas veces cometo errores, pero aun asi no quiero que dudes nunca de mis sentimientos por ti.
+      Espero que siempre puedas ser feliz Gamaliel.
+      La verdad es que no puedo decirte cuanto te amo en palabras, pero espero que por lo menos puedas
+      ver y sentir una minima parte de todo ese amor.
+    </p>
+    <p>
+      Feliz vida, mi vida. Te amo.
+    </p>
+
+    <p>
+      De tu amada y guapisima toxica.
+
+    </p>
+    <div class="heart-line">❤</div>
+    <div class="buttons">
+      <button onclick="showCat()">Regresar</button>
+    </div>
+    <div class="footer">( Made by Lindsay )</div>
+  </div>
+
+  <script>
+    function showReminder() {
+      document.getElementById("catCard").classList.remove("visible");
+      document.getElementById("reminderCard").classList.add("visible");
+    }
+
+    function showCat() {
+      document.getElementById("reminderCard").classList.remove("visible");
+      document.getElementById("catCard").classList.add("visible");
+    }
+  </script>
+
+</body>
+</html>
